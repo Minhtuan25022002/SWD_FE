@@ -87,6 +87,8 @@ function ClubPage() {
     return <div>Loading...</div>;
   }
 
+  console.log(clubDetail);
+
   const date = new Date(clubDetail.dateTime);
   const day = date.getDate();
   const month = date.getMonth() + 1;

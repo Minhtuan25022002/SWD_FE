@@ -78,12 +78,12 @@ function ModalClubInfo({ isOpen, toggleFromParent, data }) {
             // Call API to edit the club
             if (club && club.id) {
                 await updateClub(club.id, updatedFormData);
-                showSuccessToast('Club updated successfully!');
+                showSuccessToast('Cập nhập câu lạc bộ thành công');
                 toggle();
                 setClub(data);
             }
         } catch (error) {
-            showErrorToast('Club update error')
+            showErrorToast('Cập nhập câu lạc bộ thất bại')
             console.log(error);
         }
     }

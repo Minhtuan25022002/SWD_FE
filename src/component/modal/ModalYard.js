@@ -8,8 +8,6 @@ function ModalYard({ isOpen, toggleFromParent, createNewArea }) {
     const [areas, setAreas] = useState([])
     const [sports, setSport] = useState([]);
 
-
-
     const [formData, setFormData] = useState({
         name: '',
         areaName: '',

@@ -78,9 +78,10 @@ function ModalClub({ isOpen, toggleFromParent, createNewClub }) {
           sportName: "",
           sportId: "",
         });
+        showSuccessToast("Thành công")
         toggle();
       } catch (error) {
-        showErrorToast("Club added error!");
+        showErrorToast("Thất bại");
         console.log(error);
       }
     }

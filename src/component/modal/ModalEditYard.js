@@ -55,10 +55,11 @@ function ModalEditYard({ isOpen, toggleFromParent, currentYard, editYard }) {
             try {
                 // Call API to edit the club
                 await editYard(currentYard.id, formData);
-                showSuccessToast('Club updated successfully!');
+                showSuccessToast('Thành công');
                 editYard(currentYard.id, formData);
                 toggle();
             } catch (error) {
+                showErrorToast("Thất bại")
                 console.log(error);
             }
         }

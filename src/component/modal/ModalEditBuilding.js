@@ -50,10 +50,11 @@ function ModalEditBuilding({ isOpen, toggleFromParent, currentBuilding, editBuil
             try {
                 // Call API to edit the club
                 await editBuilding(currentBuilding.id, formData);
-                showSuccessToast('Club updated successfully!');
+                showSuccessToast('Thành công');
                 editBuilding(currentBuilding.id, formData);
                 toggle();
             } catch (error) {
+                showErrorToast("Thất bại")
                 console.log(error);
             }
         }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { emitter } from '../../utils/emitter';
-import { showErrorToast } from "../toast/toast";
+import { showErrorToast, showSuccessToast } from "../toast/toast";
 import { getAllAreas } from "../../services/userService";
 
 function ModalAddBuilding({ isOpen, toggleFromParent, createNewArea }) {
@@ -67,9 +67,10 @@ function ModalAddBuilding({ isOpen, toggleFromParent, createNewArea }) {
                     areaName: '',
                     areaId: 0,
                 });
+                showSuccessToast("Thành công")
                 toggle();
             } catch (error) {
-                showErrorToast("Club added error!");
+                showErrorToast("Thất bại");
                 console.log(error);
             }
         }

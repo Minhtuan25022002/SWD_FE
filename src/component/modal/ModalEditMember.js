@@ -74,7 +74,7 @@ function ModalEditMember({ isOpen, toggleFromParent, currentUser, editUser }) {
     if (checkValidateInput()) {
       await editUser(currentUser.id, formData);
       toggle();
-      showSuccessToast('User updated successfully!')
+      showSuccessToast('Thành công')
     }
   };
 

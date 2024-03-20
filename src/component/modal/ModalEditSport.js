@@ -47,10 +47,11 @@ function ModalEditSport({ isOpen, toggleFromParent, currentSport, editSport }) {
       try {
         // Call API to edit the sport
         await editSport(currentSport.id, formData);
-        showSuccessToast('Sport updated successfully!');
+        showSuccessToast('Cập nhập thành công');
         editSport(currentSport.id, formData);
         toggle();
       } catch (error) {
+        showErrorToast("Cập nhập thất bại")
         console.log(error);
       }
     }

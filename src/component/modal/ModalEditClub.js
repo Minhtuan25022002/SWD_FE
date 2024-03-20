@@ -49,10 +49,11 @@ function ModalEditClub({ isOpen, toggleFromParent, currentClub, editClub }) {
       try {
         // Call API to edit the club
         await editClub(currentClub.id, formData);
-        showSuccessToast('Club updated successfully!');
+        showSuccessToast('Thành công');
         editClub(currentClub.id, formData);
         toggle();
       } catch (error) {
+        showErrorToast("Thất bại")
         console.log(error);
       }
     }
